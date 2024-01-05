@@ -1,5 +1,3 @@
-// console.log("Hello, World!");
-
 const getComputerChoice = () => {
   const choices = Math.floor(Math.random() * 3);
   if (choices == 0) {
@@ -11,8 +9,8 @@ const getComputerChoice = () => {
   }
 };
 
-const computerSelection = getComputerChoice();
-const playerSelection = prompt("rock, paper, or scissors?").toLowerCase();
+let playerScore = 0;
+let computerScore = 0;
 
 const playRound = (playerSelection, computerSelection) => {
   if (playerSelection == computerSelection) {
@@ -22,13 +20,27 @@ const playRound = (playerSelection, computerSelection) => {
     (playerSelection == "paper" && computerSelection == "scissors") ||
     (playerSelection == "scissors" && computerSelection == "rock")
   ) {
+    computerScore++;
     return `You lose, ${computerSelection} beats ${playerSelection}`;
   } else {
+    playerScore++;
     return `You win, ${playerSelection} beats ${computerSelection}`;
   }
 };
 
-console.log(computerSelection);
-console.log(playerSelection);
+const game = () => {
+  for (let i = 0; i < 5; i++) {
+    const computerSelection = getComputerChoice();
+    const playerSelection = prompt("rock, paper, or scissors?").toLowerCase();
+    console.log(playRound(playerSelection, computerSelection));
+  }
+  if (playerScore < computerScore) {
+    console.log(`You Lose, ${playerScore} : ${computerScore}`);
+  } else if (playerScore == computerScore) {
+    console.log(`It's a Tie, ${playerScore} : ${computerScore}`);
+  } else {
+    console.log(`You Win, ${playerScore} : ${computerScore}`);
+  }
+};
 
-console.log(playRound(playerSelection, computerSelection));
+console.log(game());
