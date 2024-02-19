@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #99b898;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 60px;
+  font-family: monospace;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a363b;
+}
+
+#result {
+  font-size: 48px;
+  font-family: monospace;
+}
+
+.playerSelection {
+  display: flex;
+  gap: 12px;
+}
+
+.playerSelection button {
+  padding: 12px;
+  font-size: 48px;
+  border-radius: 12px;
+  background-color: #ff847c;
+  cursor: pointer;
+}
+
+.scoreWrapper {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  font-size: 36px;
+  font-family: monospace;
+}
+
+#resetButton {
+  padding: 8px 24px;
+  font-size: 36px;
+  border-radius: 16px;
+  background-color: #e84a5f;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.footer {
+  background-color: black;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+
+.footer a {
+  text-decoration: none;
+}

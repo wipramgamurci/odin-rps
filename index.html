@@ -3,7 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <title>rps</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <h1 class="header">Odin RPS</h1>
+    <div class="content">
+      <div id="result">Chose one!</div>
+      <div class="playerSelection">
+        <button id="rock">✊</button>
+        <button id="paper">✋</button>
+        <button id="scissors">✌️</button>
+      </div>
+      <div class="scoreWrapper">
+        <span id="playerScore">0</span> : <span id="computerScore">0</span>
+      </div>
+      <div id="reset"></div>
+    </div>
+    <div class="footer">
+      <a href="https://github.com/wipramgamurci" target="_blank">W S Gamurci</a>
+    </div>
+  </body>
 </html>
